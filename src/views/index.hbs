@@ -1,10 +1,42 @@
-<div class="container">
-    <div class="row">
-        <div class="col-md-12">
-            <h1 class="text-center">Pagina Inicial</h1>
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsum corporis voluptates necessitatibus quo
-                nobis est neque aliquid fugiat, aut recusandae doloremque provident dolore eveniet odio distinctio
-                cumque similique! Perspiciatis, asperiores!</p>
+<div class="flex-row bg-gray-600 text-white">
+    <div class=" flex justify-between w-3/4 px-8 py-2 pb-4">
+        <div class="flex flex-col">
+            <label for="" class="text-center">Fechas</label>
+            <div class="flex flex-row">
+                <input id="dtEntrada" class="rounded-l-lg bg-gray-200 text-gray-800 px-3 py-1" placeholder="entrada"
+                    name="entrada1">
+                <input id="dtSalida" class="rounded-r-lg bg-gray-200 text-gray-800 px-3 py-1" placeholder="salida"
+                    name="salida">
+            </div>
+        </div>
+        <div class="flex flex-col">
+            <label for="" class="text-center">Cantidad Huespedes</label>
+            <div class="flex flex-row">
+                <input id="dtSalida" class="rounded-lg bg-gray-200 text-gray-800 px-3 py-1" placeholder="salida"
+                    name="salida">
+            </div>
+        </div>
+        <div class="flex flex-col">
+            <label for="" class="text-center">Departamento</label>
+            <div class="flex flex-row">
+                <select class="rounded-lg bg-gray-200 text-gray-800 px-3 py-1">
+                    <option>Seleccionar</option>
+                    <option>1</option>
+                    <option>2</option>
+                </select>
+            </div>
         </div>
     </div>
+    <div class="w-1/4">
+
+    </div>
 </div>
+
+<script>
+    $('#dtEntrada').datepicker({
+        uiLibrary: 'bootstrap4'
+    });
+    $('#dtSalida').datepicker({
+        uiLibrary: 'bootstrap4'
+    });
+</script>
