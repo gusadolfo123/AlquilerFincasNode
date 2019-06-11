@@ -1,5 +1,4 @@
 # AlquilerFincasNode
-AlquilerFincasNode
 
 Proyecto Practica Aplicacion Monolitica de Alquiler de Fincas 
 
