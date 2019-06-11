@@ -1,0 +1,7 @@
+
+Steps:
+1. Definir los Modelos
+2. Configurar Cadena de Conexion 
+3. Configurar Passport
+4. Configurar Helper auth
+5. Configurar Controllers
