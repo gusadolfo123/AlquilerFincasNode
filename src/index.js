@@ -56,8 +56,8 @@ app.use((req, res, next) => {
 });
 
 // Routes
-app.use(require('./routes/user.route'));
 app.use(require('./routes/index.route'));
+app.use(require('./routes/user.route'));
 app.use(require('./routes/farm.route'));
 
 // Server Running
