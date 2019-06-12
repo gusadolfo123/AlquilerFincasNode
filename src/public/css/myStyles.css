@@ -1,0 +1,18 @@
+.bg-facebook {
+	background-color: #395da4;
+}
+.bg-whatsapp {
+	background-color: #166379;
+}
+.bg-instagram {
+	background-color: #2160a3;
+}
+.bg-facebook:hover {
+	background-color: #395da462;
+}
+.bg-whatsapp:hover {
+	background-color: #16647977;
+}
+.bg-instagram:hover {
+	background-color: #2160a367;
+}

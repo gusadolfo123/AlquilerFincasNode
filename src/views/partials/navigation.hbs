@@ -1,5 +1,5 @@
 <!-- BEGIN header -->
-<header class="w-full bg-white text-blue-600 border-b border-blue-300 shadow py-2">
+<header class="w-full bg-white text-gray-600 border-b border-gray-300 shadow py-2">
     <div class="container mx-auto">
         <div class="flex justify-between mx-2">
             <div class="flex justify-center items-center block lg:hidden">
@@ -12,19 +12,43 @@
                 </button>
             </div>
             <div class="flex justify-between items-center text-center">
-                <div class="px-2"><a href="/">Inicio</a></div>
-                <div class="px-2"><a href="/farms">Fincas</a></div>
-                <div class="px-2"><a href="/about">Nosotros</a></div>
-                <div class="px-2"><a href="/contact">Contacto</a></div>
+                <div class="px-2 font-bold hover:text-blue-500 active:text-blue-500">
+                    <i class="fas fa-home text-xl mr-2"></i><a href="/">Inicio</a>
+                </div>
+                <div class="px-2 font-bold hover:text-blue-500 active:text-blue-500">
+                    <i class="fas fa-map-marker-alt text-xl mr-2"></i><a href="/farms">Fincas</a>
+                </div>
+                <div class="px-2 font-bold hover:text-blue-500 active:text-blue-500">
+                    <i class="fas fa-users text-xl mr-2"></i><a href="/about">Nosotros</a>
+                </div>
+                <div class="px-2 font-bold hover:text-blue-500 active:text-blue-500">
+                    <i class="fas fa-mail-bulk text-xl mr-2"></i><a href="/contact">Contacto</a>
+                </div>
             </div>
-            <div class="flex justify-center items-center">
+            {{!-- <div class="flex justify-center items-center">
                 <img src="/images/logo5.png" alt="logo" class="w-32">
-            </div>
+            </div> --}}
             <div class="flex justify-end items-center text-center">
+                <div
+                    class="p-2 bg-blue-500 text-white rounded-full w-12 h-12 flex justify-center items-center mr-2 hover:text-blue-700 active:text-blue-500 hover:bg-blue-300">
+                    <a href="#" class="hover:text-white"><i class="fab fa-twitter text-2xl"></i></a>
+                </div>
+                <div
+                    class="p-2 bg-facebook text-white rounded-full w-12 h-12 flex justify-center items-center mr-2 hover:text-blue-700 active:text-blue-500">
+                    <a href="#" class="hover:text-white"><i class="fab fa-facebook text-2xl"></i></a>
+                </div>
+                <div
+                    class="p-2 bg-whatsapp text-white rounded-full w-12 h-12 flex justify-center items-center mr-2 hover:text-blue-700 active:text-blue-500">
+                    <a href="#" class="hover:text-white"><i class="fab fa-whatsapp text-2xl"></i></a>
+                </div>
+                <div
+                    class="p-2 bg-instagram text-white rounded-full w-12 h-12 flex justify-center items-center hover:text-blue-700 active:text-blue-500">
+                    <a href="#" class="hover:text-white"><i class="fab fa-instagram text-2xl"></i></a>
+                </div>
+                {{!-- <a href="/user/signin"
+                    class="bg-white border border-blue-400 font-bold rounded-lg p-2 px-4 mr-4 hover:bg-blue-400 hover:shadow">Ingresar</a>
                 <a href="/user/signin"
-                    class="bg-white border border-blue-400 font-bold rounded-lg p-2 px-4 mr-4 hover:bg-blue-400 hover:text-white hover:shadow">Ingresar</a>
-                <a href="/user/signin"
-                    class="bg-white border border-blue-400 font-bold rounded-lg p-2 px-4 mr-2 hover:bg-blue-400 hover:text-white hover:shadow">Registrar</a>
+                    class="bg-white border border-blue-400 font-bold rounded-lg p-2 px-4 mr-2 hover:bg-blue-400 hover:shadow">Registrar</a> --}}
             </div>
         </div>
     </div>

@@ -1,4 +1,6 @@
 
+npm i faker 
+
 Steps:
 1. Definir los Modelos
 2. Configurar Cadena de Conexion 

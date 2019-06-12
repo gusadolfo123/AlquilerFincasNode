@@ -1,7 +1,5 @@
 const mongoose = require('mongoose');
 const { Schema } = mongoose;
-const { Image } = require('./image');
-const { Service } = require('./service');
 
 const FarmSchema = new Schema({
 	name: { type: String, required: true },
@@ -12,13 +10,34 @@ const FarmSchema = new Schema({
 		lat: { type: Schema.Types.Decimal128 },
 		lon: { type: Schema.Types.Decimal128 },
 	},
-	images: [[Image]],
+	images: [
+		{
+			name: { type: String },
+			url: { type: String },
+			size: { type: String },
+		},
+	],
 	prices: {
-		low_season: Price,
-		mid_season: Price,
-		high_season: Price,
+		low_season: {
+			total: { type: Schema.Types.Decimal128 },
+			per_persona: { type: Schema.Types.Decimal128 },
+		},
+		mid_season: {
+			total: { type: Schema.Types.Decimal128 },
+			per_persona: { type: Schema.Types.Decimal128 },
+		},
+		high_season: {
+			total: { type: Schema.Types.Decimal128 },
+			per_persona: { type: Schema.Types.Decimal128 },
+		},
 	},
-	services: [[Service]],
+	services: [
+		{
+			name: { type: String },
+			description: { type: String },
+			icon: { type: String },
+		},
+	],
 });
 
 module.exports = mongoose.model('Farm', FarmSchema);
