@@ -3,10 +3,25 @@ const router = express.Router();
 const Farm = require('../models/farm');
 const { generateFarms } = require('../test/farm.fake');
 
-router.get('/farms', async (req, res) => {
-	const farms = await Farm.find({});
-	console.log(farms[0]);
-	res.render('farms/index', { farms });
+router.get('/farms/:page?', async (req, res, next) => {
+	const perPage = 9;
+	console.log(req.params.page);
+	const page = req.params.page || 1;
+
+	const farms = await Farm.find({})
+		.skip(perPage * page - perPage)
+		.limit(perPage)
+		.exec((err, farms) => {
+			Farm.countDocuments((err, count) => {
+				if (err) return next(err);
+				res.render('farms/index', {
+					farms,
+					current: page,
+					pages: Math.ceil(count / perPage),
+					total: count,
+				});
+			});
+		});
 });
 
 router.get('/farms/generate', async (req, res) => {
@@ -15,7 +30,6 @@ router.get('/farms/generate', async (req, res) => {
 			res.send(result);
 		})
 		.catch(error => {
-			console.log(error);
 			res.send(error);
 		});
 });

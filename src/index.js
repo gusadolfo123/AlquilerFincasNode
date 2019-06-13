@@ -5,6 +5,7 @@ const methodOverride = require('method-override');
 const session = require('express-session');
 const flash = require('connect-flash');
 const passport = require('passport');
+const hbs = require('./helpers/handlebars-helpers');
 
 const app = express();
 require('./database');
@@ -20,6 +21,7 @@ app.engine(
 		layoutsDir: path.join(app.get('views'), 'layouts'),
 		partialsDir: path.join(app.get('views'), 'partials'),
 		extname: '.hbs',
+		helpers: hbs,
 	}),
 );
 
