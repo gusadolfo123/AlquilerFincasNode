@@ -9,7 +9,7 @@ fakerFarms.generateFarms = async () => {
 			name: faker.company.companyName(),
 			alias: faker.company.companySuffix(),
 			dir: faker.address.secondaryAddress(),
-			description: faker.lorem.sentence(200, 20),
+			description: faker.lorem.sentence(5, 5),
 			coordinate: {
 				lat: faker.address.latitude(),
 				lon: faker.address.longitude(),
@@ -29,15 +29,15 @@ fakerFarms.generateFarms = async () => {
 			prices: {
 				low_season: {
 					total: faker.commerce.price(800000, 3500000, 2),
-					per_persona: faker.commerce.price(120000, 350000, 2),
+					per_person: faker.commerce.price(120000, 350000, 2),
 				},
 				mid_season: {
 					total: faker.commerce.price(1200000, 3500000, 2),
-					per_persona: faker.commerce.price(120000, 350000, 2),
+					per_person: faker.commerce.price(120000, 350000, 2),
 				},
 				high_season: {
 					total: faker.commerce.price(1200000, 3500000, 2),
-					per_persona: faker.commerce.price(180000, 350000, 2),
+					per_person: faker.commerce.price(180000, 350000, 2),
 				},
 			},
 			services: [
@@ -51,6 +51,13 @@ fakerFarms.generateFarms = async () => {
 					description: faker.name.jobDescriptor(),
 					icon: faker.internet.avatar.name,
 				},
+			],
+			terms_conditions: [
+				faker.random.words(5),
+				faker.random.words(5),
+				faker.random.words(5),
+				faker.random.words(5),
+				faker.random.words(5),
 			],
 		});
 		farms.push(await newFarm.save());

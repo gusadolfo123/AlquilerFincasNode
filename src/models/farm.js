@@ -20,15 +20,15 @@ const FarmSchema = new Schema({
 	prices: {
 		low_season: {
 			total: { type: Schema.Types.Decimal128 },
-			per_persona: { type: Schema.Types.Decimal128 },
+			per_person: { type: Schema.Types.Decimal128 },
 		},
 		mid_season: {
 			total: { type: Schema.Types.Decimal128 },
-			per_persona: { type: Schema.Types.Decimal128 },
+			per_person: { type: Schema.Types.Decimal128 },
 		},
 		high_season: {
 			total: { type: Schema.Types.Decimal128 },
-			per_persona: { type: Schema.Types.Decimal128 },
+			per_person: { type: Schema.Types.Decimal128 },
 		},
 	},
 	services: [
@@ -38,6 +38,7 @@ const FarmSchema = new Schema({
 			icon: { type: String },
 		},
 	],
+	terms_conditions: [String],
 });
 
 module.exports = mongoose.model('Farm', FarmSchema);

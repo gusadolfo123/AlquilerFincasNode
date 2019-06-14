@@ -16,3 +16,88 @@
 .bg-instagram:hover {
 	background-color: #2160a367;
 }
+.image-wrapper {
+	overflow: hidden;
+	display: inline-block;
+}
+
+.image-wrapper img {
+	float: left;
+	display: block;
+}
+
+.image-wrapper:after,
+.loading {
+	content: ' ';
+	background: transparent url('../images/loading_spinner.gif') center no-repeat;
+	background-size: auto 100%;
+	width: 100%;
+	height: 140px;
+	display: block;
+}
+
+.prices:after {
+	content: ' ';
+	background-color: cadetblue;
+}
+
+.bg-grandient {
+	background: rgba(56, 55, 56, 1);
+	background: -moz-linear-gradient(
+		top,
+		rgba(56, 55, 56, 1) 0%,
+		rgba(77, 76, 76, 1) 31%,
+		rgba(115, 115, 115, 1) 48%,
+		rgba(82, 77, 77, 1) 68%,
+		rgba(56, 55, 56, 1) 100%
+	);
+	background: -webkit-gradient(
+		left top,
+		left bottom,
+		color-stop(0%, rgba(56, 55, 56, 1)),
+		color-stop(31%, rgba(77, 76, 76, 1)),
+		color-stop(48%, rgba(115, 115, 115, 1)),
+		color-stop(68%, rgba(82, 77, 77, 1)),
+		color-stop(100%, rgba(56, 55, 56, 1))
+	);
+	background: -webkit-linear-gradient(
+		top,
+		rgba(56, 55, 56, 1) 0%,
+		rgba(77, 76, 76, 1) 31%,
+		rgba(115, 115, 115, 1) 48%,
+		rgba(82, 77, 77, 1) 68%,
+		rgba(56, 55, 56, 1) 100%
+	);
+	background: -o-linear-gradient(
+		top,
+		rgba(56, 55, 56, 1) 0%,
+		rgba(77, 76, 76, 1) 31%,
+		rgba(115, 115, 115, 1) 48%,
+		rgba(82, 77, 77, 1) 68%,
+		rgba(56, 55, 56, 1) 100%
+	);
+	background: -ms-linear-gradient(
+		top,
+		rgba(56, 55, 56, 1) 0%,
+		rgba(77, 76, 76, 1) 31%,
+		rgba(115, 115, 115, 1) 48%,
+		rgba(82, 77, 77, 1) 68%,
+		rgba(56, 55, 56, 1) 100%
+	);
+	background: linear-gradient(
+		to bottom,
+		rgba(56, 55, 56, 1) 0%,
+		rgba(77, 76, 76, 1) 31%,
+		rgba(115, 115, 115, 1) 48%,
+		rgba(82, 77, 77, 1) 68%,
+		rgba(56, 55, 56, 1) 100%
+	);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#383738', endColorstr='#383738', GradientType=0 );
+}
+.spinner-center {
+	height: 100vh !important;
+	width: 100vh !important;
+	text-align: center !important;
+	display: flex !important;
+	vertical-align: middle !important;
+}

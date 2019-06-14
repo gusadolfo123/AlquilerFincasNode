@@ -26,6 +26,7 @@ app.engine(
 );
 
 app.set('view engine', '.hbs');
+app.use(express.urlencoded({ extended: false }));
 app.use(methodOverride('_method'));
 app.use(
 	session({
@@ -61,6 +62,7 @@ app.use((req, res, next) => {
 app.use(require('./routes/index.route'));
 app.use(require('./routes/user.route'));
 app.use(require('./routes/farm.route'));
+app.use(require('./routes/company.route'));
 
 // Server Running
 app.listen(app.get('port'), () => {

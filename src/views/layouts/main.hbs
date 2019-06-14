@@ -12,12 +12,12 @@
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.css">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-slider/10.6.1/css/bootstrap-slider.css">
     <link rel="stylesheet" href="/css/app.css">
     <link rel="stylesheet" href="/css/myStyles.css">
 
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-        crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
         integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
         crossorigin="anonymous"></script>
@@ -25,24 +25,31 @@
         integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
         crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.js"></script>
-
-    <title>Mi App Node</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-slider/10.6.1/bootstrap-slider.js"></script>
+    <title>Alquiler Fincas</title>
 </head>
 
 <body>
 
-    {{> navigation}}
+    <div id="app" class="d-none">
+        {{> navigation}}
+        {{> messages}}
+        {{> errors}}
+        {{{ body}}}
+    </div>
 
+    <div id="spinnerP" class="w-screen h-screen flex justify-center items-center bg-gray-200">
+        <div class="spinner-border text-success" role="status">
+            <span class="sr-only">Loading...</span>
+        </div>
+    </div>
 
-    {{> messages}}
-    {{> errors}}
-    {{{ body}}}
-
-
-    {{!-- <footer class="bg-secondary p-4">
-        <p class="text-white mb-0">Footer</p>
-    </footer> --}}
-
+    <script>
+        $(window).on('load', function () {
+            $("#spinnerP").fadeOut("slow");
+            $("#app").removeClass("d-none");
+        });
+    </script>
 
 </body>
 

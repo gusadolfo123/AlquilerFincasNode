@@ -2,16 +2,10 @@ const express = require('express');
 const router = express.Router();
 const landingController = require('../controllers/landing.controller');
 
-router.get('/', (req, res) => {
-	res.render('index');
-});
-
-router.get('/about', (req, res) => {
-	res.render('about');
-});
-
-router.get('/contact', (req, res) => {
-	res.render('contact');
-});
+router.get('/', landingController.index);
+router.get('/about', landingController.about);
+router.get('/contact', landingController.contact);
+router.get('/farms/generate', landingController.generateFakeData);
+router.get('/farms/:page?', landingController.getFarmsPerPage);
 
 module.exports = router;
